@@ -1,0 +1,212 @@
+-- MySQL dump 10.13  Distrib 5.5.52, for Linux (x86_64)
+--
+-- Host: localhost    Database: barle
+-- ------------------------------------------------------
+-- Server version	5.5.52
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `dat_attendees`
+--
+
+DROP TABLE IF EXISTS `dat_attendees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_attendees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `afname` varchar(200) DEFAULT NULL,
+  `alname` varchar(200) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `parent_id_fk` int(11) DEFAULT NULL,
+  `created_on` datetime DEFAULT NULL,
+  `mobile` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=176 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_attendees`
+--
+
+LOCK TABLES `dat_attendees` WRITE;
+/*!40000 ALTER TABLE `dat_attendees` DISABLE KEYS */;
+INSERT INTO `dat_attendees` VALUES (99,'Deepak','Alur',44,'Male',37,'2016-12-12 09:01:42','9980921451','deepak@alur.in',1000),(103,'Aarti','Alur',40,'Female',37,'2016-12-12 10:24:57','','',1020),(104,'Tanvi','Alur',8,'Female',37,'2016-12-12 10:25:09','','',510),(105,'Prakash','Rajagoli',45,'Male',38,'2016-12-12 13:49:39','9845755672','pcrajagoli@gmail.com',1000),(109,'Gangadhar','Wali',46,'Male',39,'2016-12-12 15:01:32','9972344799','bvbwali@yahoo.com',1000),(110,'Ashwini','Wali',31,'Female',39,'2016-12-12 15:02:01','','',1000),(111,'Veena','Hebsur',44,'Female',40,'2016-12-12 17:45:40','9845689272','qveen72@gmail.com',1000),(112,'Girish','Doddamani',44,'Male',41,'2016-12-12 18:01:13','9845498346','girishdoddamani@gmail.com',1000),(113,'Sunita ','Doddamani',36,'Female',41,'2016-12-12 18:14:35','','',1000),(114,'Sujith','Doddamani',14,'Male',41,'2016-12-12 18:15:10','','',1000),(115,'Isha','Doddamani',6,'Female',41,'2016-12-12 18:18:34','','',500),(117,'Sanjeev','Patwari',44,'Male',42,'2016-12-13 15:52:22','9845084292','sanjeevpatwari71@gmail.com',1000),(118,'Prakash','C',39,'Male',43,'2016-12-13 18:02:06','9448160768','prakashc77@gmail.com',1020),(119,'Sumathi ','P',35,'Female',43,'2016-12-13 18:03:16','','',1020),(120,'Raksha ','S',10,'Female',43,'2016-12-13 18:03:34','','',510),(121,'Rohan','P',8,'Male',43,'2016-12-13 18:03:48','','',510),(122,'Rishab','P',3,'Male',43,'2016-12-13 18:04:07','','',0),(125,'Basavaraj','Javalagi',47,'Male',45,'2016-12-14 12:14:28','9740566155','jbasav06@gmail.com',1000),(126,'Avanish','Javalagi',8,'Male',45,'2016-12-14 12:15:18','','',500),(127,'Shanta','Rajagoli',70,'Female',38,'2016-12-14 12:23:11','','',1000),(128,'Chandrashekhar','Rajagoli',83,'Male',38,'2016-12-14 12:23:49','','',1000),(129,'Darshan','Rajagoli',11,'Male',38,'2016-12-14 12:24:20','','',1000),(131,'deepak','alur',40,'Male',46,'2016-12-14 14:09:54','9980921451','flex_deepak@yahoo.com',10),(132,'Gururaj ','Kulkarni ',41,'Male',47,'2016-12-15 08:00:59','9886406373','rajkulkarni1@gmail.com',1000),(133,'Roopali ','Gururaj ',36,'Female',47,'2016-12-15 08:01:26','','',1000),(134,'Aniketh ','Kulkarni ',12,'Male',47,'2016-12-15 08:02:05','','',1000),(136,'Abhinav ','Kulkarni ',7,'Male',47,'2016-12-15 08:03:12','','',500),(137,'Manjunath ','Burli ',41,'Male',48,'2016-12-15 08:40:07','9379154654','winmanju@gmail.com',1000),(138,'Maheshwari ','Burli ',35,'Female',48,'2016-12-15 08:41:16','','',1000),(139,'Shreya ','Burli ',7,'Female',48,'2016-12-15 08:41:51','','',500),(140,'Aisiri','Burli ',3,'Female',48,'2016-12-15 08:42:21','','',0),(143,'Dhruv','Wali',9,'Male',39,'2016-12-15 11:20:42','','',500),(144,'Daksha','Wali',4,'Female',39,'2016-12-15 11:20:57','','',0),(145,'SURESH','TIGADI',49,'Male',49,'2016-12-15 11:27:36','9483519123','stigadi@gmail.com',1000),(146,'Somashekhar ','Sajjan',36,'Male',50,'2016-12-15 11:27:55','9663290088','somu6666@gmail.com',1000),(148,'VIJAYAKALA','TIGADI',42,'Female',49,'2016-12-15 11:28:46','','',1000),(149,'SANJEEV',' TIGADI',16,'Male',49,'2016-12-15 11:29:32','','',1000),(150,'SANJANA','TIGADI',12,'Female',49,'2016-12-15 11:30:18','','',1000),(151,'','',0,'',51,'2016-12-15 12:07:00','','',0),(152,'GIRISH','METGUDMATH',46,'Male',52,'2016-12-15 12:07:01','9845965796','helloswamy@gmail.com',1000),(153,'BHARATI','METGUDMATH',45,'Female',52,'2016-12-15 12:08:50','','',1000),(154,'SOWKHYA','METGUDMATH',14,'Female',52,'2016-12-15 12:09:26','','',1000),(155,'Vinayak','Mungurwadi',46,'Male',53,'2016-12-15 13:14:45','9845777984','bmvinayak@yahoo.com',1000),(156,'Sujata','Mungurwadi',43,'Female',53,'2016-12-15 13:19:09','','',1000),(157,'Eshaan','Mungurwadi',12,'Male',53,'2016-12-15 13:19:29','','',1000),(158,'Girish','Karadalli',29,'Male',54,'2016-12-15 15:14:31','9008795181','girishpda@gmail.com',1000),(159,'Anupa','Karadalli',24,'Female',54,'2016-12-15 15:14:57','','',1000),(160,'Channabasappa','Ullagaddi',64,'Male',55,'2016-12-15 15:26:58','9008003277','channa1952@gmail.com',1000),(161,'Channabasappa','Ullagaddi',64,'Male',56,'2016-12-15 15:35:11','9008003277','vinootherbals@gmail.com',1000),(162,'Shobha','Ullagaddi',55,'Female',56,'2016-12-15 15:35:49','','',1000),(163,'Basavaraj','Biradar',36,'Male',57,'2016-12-15 15:37:33','7847842515','biradar.basavaraj1@gmail.com',1000),(164,'Jyoti','Biradar',33,'Female',57,'2016-12-15 15:37:56','','',1000),(165,'Prabhu','Patil',44,'Male',58,'2016-12-15 15:50:31','9980638550','prabhu.e.patil@gmail.com',1000),(166,'Girish','Katti',43,'Male',59,'2016-12-15 16:01:43','9845240957','girish_katti@yahoo.com',1000),(167,'Revathi ','Katti',43,'Female',59,'2016-12-15 16:02:27','','',1000),(168,'Lavith G','Katti',2,'Male',59,'2016-12-15 16:09:33','','',0),(169,'Kapeed','Rula',22,'Male',60,'2016-12-15 16:28:22','9980921451','yappa@email.com',1000),(170,'Raghavendra','Kalumangi',36,'Male',61,'2016-12-15 19:43:15','9008892005','raghavendrapra@gmail.com',1000),(171,'Soumya','Katti',30,'Female',61,'2016-12-15 19:44:02','','',1000),(172,'Shashikant','Mahabalshetti',46,'Male',62,'2016-12-16 00:03:36','9845231067','shashishetti@yahoo.co.in',1000),(173,'Rajeshwari','Akki Mahabalshetti',44,'Female',62,'2016-12-16 00:04:17','','',1000),(174,'Esha','Mahabalshetti',13,'Female',62,'2016-12-16 00:04:58','','',1000),(175,'Neha','Mahabalshetti',7,'Female',62,'2016-12-16 00:05:22','','',500);
+/*!40000 ALTER TABLE `dat_attendees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dat_payments`
+--
+
+DROP TABLE IF EXISTS `dat_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_payments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `amt` float DEFAULT NULL,
+  `paid_by_email` varchar(500) DEFAULT NULL,
+  `paid_by_name` varchar(1000) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `currency` varchar(50) DEFAULT NULL,
+  `insta_ded` float DEFAULT NULL,
+  `lurl` varchar(2000) DEFAULT NULL,
+  `mac` varchar(5000) DEFAULT NULL,
+  `payment_id` varchar(2000) DEFAULT NULL,
+  `payment_request_id` varchar(2000) DEFAULT NULL,
+  `purpose` varchar(500) DEFAULT NULL,
+  `shorturl` varchar(2000) DEFAULT NULL,
+  `status` varchar(1000) DEFAULT NULL,
+  `paid_on` datetime DEFAULT NULL,
+  `updated_on` datetime DEFAULT NULL,
+  `attendee_id_fk` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_payments`
+--
+
+LOCK TABLES `dat_payments` WRITE;
+/*!40000 ALTER TABLE `dat_payments` DISABLE KEYS */;
+INSERT INTO `dat_payments` VALUES (62,1000,'deepak@alur.in','Deepak','+919980921451','INR',19,NULL,NULL,'MOJO6c12005J99409857','beab0f82ee6943598c61ce1061e36a1e','UK-G2G Jan 2016',NULL,'Credit','2016-12-12 09:21:44','2016-12-12 09:21:44',37),(63,1530,'deepak@alur.in','Deepak','+919980921451','INR',29.07,NULL,NULL,'MOJO6c12005J99410650','2fe0c3059299480b95ba863e2e034a23','UK-G2G Jan 2016',NULL,'Credit','2016-12-12 10:28:45','2016-12-12 10:28:45',37),(64,3060,'prakashc77@gmail.com','Prakash','+919448160768','INR',58.14,NULL,NULL,'MOJO6c13005N41312565','e01821f0b24d404db12d0bf8ab5bad8d','UK-G2G Jan 2016',NULL,'Credit','2016-12-13 18:10:27','2016-12-13 18:10:24',43),(67,10,'flex_deepak@yahoo.com','deepak','+919980921451','INR',3.2,NULL,NULL,'MOJO6c14005D71645480','4852f55ab16944bb9395b4b3629f7756','UK-G2G Jan 2016',NULL,'Credit','2016-12-14 14:26:23','2016-12-14 14:26:21',46),(68,3500,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'MOJO6c15005N24986097','b4681504bf69405c961bb982364fe94c',NULL,NULL,'Credit','2016-12-15 08:05:46',NULL,47),(70,2500,'bvbwali@yahoo.com','Gangadhar','+919972344799','INR',47.5,NULL,NULL,'MOJO6c15005J24988436','df6cb8b8165441bdaa6715f588ae0b5e','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 11:23:15','2016-12-15 11:23:15',39),(71,1000,'qveen72@gmail.com','Veena','+919845689272','INR',19,NULL,NULL,'MOJO6c15005J24989133','a57b218b5c6f443caefe78dce77fc5af','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 11:57:45','2016-12-15 11:57:44',40),(72,4000,'stigadi@gmail.com','SURESH','+919483519123','INR',76,NULL,NULL,'MOJO6c15005N24988630','318d6da8ec244176ab166489e437b1e4','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 12:03:50','2016-12-15 12:03:49',49),(73,3000,'helloswamy@gmail.com','GIRISH','+919845965796','INR',57,NULL,NULL,'MOJO6c15005J24989445','98d37285eb9044209ab7201cb69ee528','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 12:12:55','2016-12-15 12:12:55',52),(74,4000,'pcrajagoli@gmail.com','Prakash','+919845755672','INR',76,NULL,NULL,'MOJO6c15005J24989767','acdff64b18644ca9bcd65fa959ac09ce','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 12:28:35','2016-12-15 12:28:35',38),(75,3000,'bmvinayak@yahoo.com','Vinayak','+919845777984','INR',57,NULL,NULL,'MOJO6c15005J24990888','99fd5ac8ad7747fca65d634c49a14594','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 13:22:00','2016-12-15 13:22:00',53),(76,2000,'vinootherbals@gmail.com','Channabasappa','+919008003277','INR',38,NULL,NULL,'MOJO6c15005N24993319','422946848a99468f9eefc77f509722cf','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 15:38:44','2016-12-15 15:38:43',56),(77,2000,'girish_katti@yahoo.com','Girish','+919845240957','INR',38,NULL,NULL,'MOJO6c15005J24993898','40f475e468394f0fbc70740f4921a7e8','UK-G2G Jan 2016',NULL,'Credit','2016-12-15 16:12:02','2016-12-15 16:12:02',59);
+/*!40000 ALTER TABLE `dat_payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dat_regs`
+--
+
+DROP TABLE IF EXISTS `dat_regs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_regs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(200) DEFAULT NULL,
+  `lname` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `mobile` varchar(20) DEFAULT NULL,
+  `reg_on` datetime DEFAULT NULL,
+  `pwd` varchar(30) DEFAULT NULL,
+  `num_of_adults` int(11) DEFAULT NULL,
+  `num_of_kids` int(11) DEFAULT NULL,
+  `remote_ip` varchar(200) DEFAULT NULL,
+  `address` varchar(10000) DEFAULT NULL,
+  `pincode` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_regs`
+--
+
+LOCK TABLES `dat_regs` WRITE;
+/*!40000 ALTER TABLE `dat_regs` DISABLE KEYS */;
+INSERT INTO `dat_regs` VALUES (37,'Deepak','Alur','deepak@alur.in','9980921451','2016-12-12 09:01:42','deepak@12',NULL,NULL,NULL,'Bilekhalli, Bangalore','560076'),(38,'Prakash','Rajagoli','pcrajagoli@gmail.com','9845755672','2016-12-12 13:49:39','raj71prakash',NULL,NULL,NULL,'#365, T2, Perody Paradise, 6th Mn, 11th Cross, SRS Nagar, Bilekahalli, Bannerghatta Road, Bengaluru','560076'),(39,'Gangadhar','Wali','bvbwali@yahoo.com','9972344799','2016-12-12 15:01:32','karnatakata',NULL,NULL,NULL,NULL,NULL),(40,'Veena','Hebsur','qveen72@gmail.com','9845689272','2016-12-12 17:45:40','vmg@1234',NULL,NULL,NULL,NULL,NULL),(41,'Girish','Doddamani','girishdoddamani@gmail.com','9845498346','2016-12-12 18:01:13','gssiest4',NULL,NULL,NULL,NULL,NULL),(42,'Sanjeev','Patwari','sanjeevpatwari71@gmail.com','9845084292','2016-12-13 15:52:22','avvimari@06',NULL,NULL,NULL,NULL,NULL),(43,'Prakash','C','prakashc77@gmail.com','9448160768','2016-12-13 18:02:06','sai1baba2',NULL,NULL,NULL,NULL,NULL),(45,'Basavaraj','Javalagi','jbasav06@gmail.com','9740566155','2016-12-14 12:14:28','java12',NULL,NULL,NULL,NULL,NULL),(46,'deepak','alur','flex_deepak@yahoo.com','9980921451','2016-12-14 14:09:54','dsa23',NULL,NULL,'106.51.15.90',NULL,NULL),(47,'Gururaj ','Kulkarni ','rajkulkarni1@gmail.com','9886406373','2016-12-15 08:00:59','Sairam75',NULL,NULL,'106.216.170.1',NULL,NULL),(48,'Manjunath ','Burli ','winmanju@gmail.com','9379154654','2016-12-15 08:40:07','224356',NULL,NULL,'106.51.241.109',NULL,NULL),(49,'SURESH','TIGADI','stigadi@gmail.com','9483519123','2016-12-15 11:27:36','JANAJeev2017',NULL,NULL,'108.171.129.164',NULL,NULL),(50,'Somashekhar ','Sajjan','somu6666@gmail.com','9663290088','2016-12-15 11:27:55','@Shikhi143',NULL,NULL,'170.251.155.231',NULL,NULL),(51,'','','','','2016-12-15 12:07:00','',NULL,NULL,'180.179.142.108',NULL,NULL),(52,'GIRISH','METGUDMATH','helloswamy@gmail.com','9845965796','2016-12-15 12:07:01','hobemoo_1248',NULL,NULL,'125.16.167.56',NULL,NULL),(53,'Vinayak','Mungurwadi','bmvinayak@yahoo.com','9845777984','2016-12-15 13:14:45','test@1234',NULL,NULL,'122.181.187.98',NULL,NULL),(54,'Girish','Karadalli','girishpda@gmail.com','9008795181','2016-12-15 15:14:31','ilmcni',NULL,NULL,'157.49.239.68',NULL,NULL),(55,'Channabasappa','Ullagaddi','channa1952@gmail.com','9008003277','2016-12-15 15:26:58','sampgaon1',NULL,NULL,'157.49.218.31',NULL,NULL),(56,'Channabasappa','Ullagaddi','vinootherbals@gmail.com','9008003277','2016-12-15 15:35:11','sampgaonres',NULL,NULL,'157.49.218.31',NULL,NULL),(57,'Basavaraj','Biradar','biradar.basavaraj1@gmail.com','7847842515','2016-12-15 15:37:33','shravani@1',NULL,NULL,'165.225.96.71',NULL,NULL),(58,'Prabhu','Patil','prabhu.e.patil@gmail.com','9980638550','2016-12-15 15:50:31','PatPassw0rd',NULL,NULL,'122.171.153.252',NULL,NULL),(59,'Girish','Katti','girish_katti@yahoo.com','9845240957','2016-12-15 16:01:43','Lavith@1234',NULL,NULL,'80.254.150.79','163 1st floor CHCBS Colony VIijaynagar Bangalore Near BDA Complex','560040'),(60,'Kapeed','Rula','yappa@email.com','9980921451','2016-12-15 16:28:22','dsa',NULL,NULL,'106.51.15.90','304 - A Block, Surabhi Apt\'s1','5600761'),(61,'Raghavendra','Kalumangi','raghavendrapra@gmail.com','9008892005','2016-12-15 19:43:15','Kalumangi@1702',NULL,NULL,'122.166.176.67','Flat No.503, D-Block, Rohan Avriti Apartment,\r\nKaveri Nagar, KR Puram,\r\nBangalore 560048','560048'),(62,'Shashikant','Mahabalshetti','shashishetti@yahoo.co.in','9845231067','2016-12-16 00:03:36','guruling1970',NULL,NULL,'117.192.160.114','S-1, #86, Divinity, 9th Main, near Vishwakarma Temple,\r\nHampinagar, Vijaynagar 2nd Stage,\r\nBangalore','560104');
+/*!40000 ALTER TABLE `dat_regs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lkp_payments_attendees`
+--
+
+DROP TABLE IF EXISTS `lkp_payments_attendees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lkp_payments_attendees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `attendee_id_fk` int(11) DEFAULT NULL,
+  `payment_id_fk` bigint(20) DEFAULT NULL,
+  `remote_ip` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lkp_payments_attendees`
+--
+
+LOCK TABLES `lkp_payments_attendees` WRITE;
+/*!40000 ALTER TABLE `lkp_payments_attendees` DISABLE KEYS */;
+INSERT INTO `lkp_payments_attendees` VALUES (60,99,62,NULL),(61,103,63,NULL),(62,104,63,NULL),(63,118,64,NULL),(64,119,64,NULL),(65,120,64,NULL),(66,121,64,NULL),(67,122,64,NULL),(69,131,67,'106.51.15.90'),(70,132,68,'106.216.170.1'),(71,133,68,'106.216.170.1'),(72,134,68,'106.216.170.1'),(74,136,68,'106.216.170.1'),(76,109,70,'202.52.130.13'),(77,110,70,'202.52.130.13'),(78,143,70,'202.52.130.13'),(79,144,70,'202.52.130.13'),(80,111,71,'106.51.18.210'),(81,145,72,'108.171.129.164'),(82,148,72,'108.171.129.164'),(83,149,72,'108.171.129.164'),(84,150,72,'108.171.129.164'),(85,152,73,'125.16.167.56'),(86,153,73,'125.16.167.56'),(87,154,73,'125.16.167.56'),(88,105,74,'125.16.236.131'),(89,127,74,'125.16.236.131'),(90,128,74,'125.16.236.131'),(91,129,74,'125.16.236.131'),(92,155,75,'122.181.187.98'),(93,156,75,'122.181.187.98'),(94,157,75,'122.181.187.98'),(95,161,76,'157.49.218.31'),(96,162,76,'157.49.218.31'),(97,166,77,'80.254.150.79'),(98,167,77,'80.254.150.79'),(99,168,77,'80.254.150.79');
+/*!40000 ALTER TABLE `lkp_payments_attendees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mas_logins`
+--
+
+DROP TABLE IF EXISTS `mas_logins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mas_logins` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(30) DEFAULT NULL,
+  `pwd` varchar(30) DEFAULT NULL,
+  `last_login` datetime DEFAULT NULL,
+  `last_login_ip` varchar(20) DEFAULT NULL,
+  `log` varchar(10000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mas_logins`
+--
+
+LOCK TABLES `mas_logins` WRITE;
+/*!40000 ALTER TABLE `mas_logins` DISABLE KEYS */;
+INSERT INTO `mas_logins` VALUES (32,NULL,NULL,NULL,NULL,'upd res ');
+/*!40000 ALTER TABLE `mas_logins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mas_prices`
+--
+
+DROP TABLE IF EXISTS `mas_prices`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mas_prices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Adult` float DEFAULT NULL,
+  `Children` float DEFAULT NULL,
+  `Infant` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mas_prices`
+--
+
+LOCK TABLES `mas_prices` WRITE;
+/*!40000 ALTER TABLE `mas_prices` DISABLE KEYS */;
+INSERT INTO `mas_prices` VALUES (4,1000,500,0);
+/*!40000 ALTER TABLE `mas_prices` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-12-16  4:24:38

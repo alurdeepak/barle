@@ -1,0 +1,208 @@
+-- MySQL dump 10.13  Distrib 5.5.52, for Linux (x86_64)
+--
+-- Host: localhost    Database: barle
+-- ------------------------------------------------------
+-- Server version	5.5.52
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `dat_attendees`
+--
+
+DROP TABLE IF EXISTS `dat_attendees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_attendees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `afname` varchar(200) DEFAULT NULL,
+  `alname` varchar(200) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `parent_id_fk` int(11) DEFAULT NULL,
+  `created_on` datetime DEFAULT NULL,
+  `mobile` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_attendees`
+--
+
+LOCK TABLES `dat_attendees` WRITE;
+/*!40000 ALTER TABLE `dat_attendees` DISABLE KEYS */;
+INSERT INTO `dat_attendees` VALUES (99,'Deepak','Alur',44,'Male',37,'2016-12-12 09:01:42','9980921451','deepak@alur.in',1000),(103,'Aarti','Alur',40,'Female',37,'2016-12-12 10:24:57','','',1020),(104,'Tanvi','Alur',8,'Female',37,'2016-12-12 10:25:09','','',510),(105,'Prakash','Rajagoli',45,'Male',38,'2016-12-12 13:49:39','9845755672','pcrajagoli@gmail.com',1020),(106,'Darshan','Rajagoli',11,'Male',38,'2016-12-12 13:50:49','','',1020),(107,'Chandrashekhar','Rajagoli',83,'Male',38,'2016-12-12 13:51:39','','',1020),(108,'Shanta','Rajagoli',70,'Female',38,'2016-12-12 13:52:19','','',1020),(109,'Gangadhar','Wali',46,'Male',39,'2016-12-12 15:01:32','9972344799','bvbwali@yahoo.com',1020),(110,'Ashwini','Wali',31,'Female',39,'2016-12-12 15:02:01','','',1020),(111,'Veena','Hebsur',44,'Female',40,'2016-12-12 17:45:40','9845689272','qveen72@gmail.com',1020),(112,'Girish','Doddamani',44,'Male',41,'2016-12-12 18:01:13','9845498346','girishdoddamani@gmail.com',1020),(113,'Sunita ','Doddamani',36,'Female',41,'2016-12-12 18:14:35','','',1020),(114,'Sujith','Doddamani',14,'Male',41,'2016-12-12 18:15:10','','',1020),(115,'Isha','Doddamani',6,'Female',41,'2016-12-12 18:18:34','','',510),(117,'Sanjeev','Patwari',44,'Male',42,'2016-12-13 15:52:22','9845084292','sanjeevpatwari71@gmail.com',1020),(118,'Prakash','C',39,'Male',43,'2016-12-13 18:02:06','9448160768','prakashc77@gmail.com',1020),(119,'Sumathi ','P',35,'Female',43,'2016-12-13 18:03:16','','',1020),(120,'Raksha ','S',10,'Female',43,'2016-12-13 18:03:34','','',510),(121,'Rohan','P',8,'Male',43,'2016-12-13 18:03:48','','',510),(122,'Rishab','P',3,'Male',43,'2016-12-13 18:04:07','','',0),(123,'Diya','Alur',16,'Female',37,'2016-12-14 09:02:49','','',1000);
+/*!40000 ALTER TABLE `dat_attendees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dat_payments`
+--
+
+DROP TABLE IF EXISTS `dat_payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_payments` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `amt` float DEFAULT NULL,
+  `paid_by_email` varchar(500) DEFAULT NULL,
+  `paid_by_name` varchar(1000) DEFAULT NULL,
+  `phone` varchar(100) DEFAULT NULL,
+  `currency` varchar(50) DEFAULT NULL,
+  `insta_ded` float DEFAULT NULL,
+  `lurl` varchar(2000) DEFAULT NULL,
+  `mac` varchar(5000) DEFAULT NULL,
+  `payment_id` varchar(2000) DEFAULT NULL,
+  `payment_request_id` varchar(2000) DEFAULT NULL,
+  `purpose` varchar(500) DEFAULT NULL,
+  `shorturl` varchar(2000) DEFAULT NULL,
+  `status` varchar(1000) DEFAULT NULL,
+  `paid_on` datetime DEFAULT NULL,
+  `updated_on` datetime DEFAULT NULL,
+  `attendee_id_fk` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_payments`
+--
+
+LOCK TABLES `dat_payments` WRITE;
+/*!40000 ALTER TABLE `dat_payments` DISABLE KEYS */;
+INSERT INTO `dat_payments` VALUES (62,1000,'deepak@alur.in','Deepak','+919980921451','INR',19,NULL,NULL,'MOJO6c12005J99409857','beab0f82ee6943598c61ce1061e36a1e','UK-G2G Jan 2016',NULL,'Credit','2016-12-12 09:21:44','2016-12-12 09:21:44',37),(63,1530,'deepak@alur.in','Deepak','+919980921451','INR',29.07,NULL,NULL,'MOJO6c12005J99410650','2fe0c3059299480b95ba863e2e034a23','UK-G2G Jan 2016',NULL,'Credit','2016-12-12 10:28:45','2016-12-12 10:28:45',37),(64,3060,'prakashc77@gmail.com','Prakash','+919448160768','INR',58.14,NULL,NULL,'MOJO6c13005N41312565','e01821f0b24d404db12d0bf8ab5bad8d','UK-G2G Jan 2016',NULL,'Credit','2016-12-13 18:10:27','2016-12-13 18:10:24',43);
+/*!40000 ALTER TABLE `dat_payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `dat_regs`
+--
+
+DROP TABLE IF EXISTS `dat_regs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `dat_regs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(200) DEFAULT NULL,
+  `lname` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `mobile` varchar(20) DEFAULT NULL,
+  `reg_on` datetime DEFAULT NULL,
+  `pwd` varchar(30) DEFAULT NULL,
+  `num_of_adults` int(11) DEFAULT NULL,
+  `num_of_kids` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dat_regs`
+--
+
+LOCK TABLES `dat_regs` WRITE;
+/*!40000 ALTER TABLE `dat_regs` DISABLE KEYS */;
+INSERT INTO `dat_regs` VALUES (37,'Deepak','Alur','deepak@alur.in','9980921451','2016-12-12 09:01:42','deepak@12',NULL,NULL),(38,'Prakash','Rajagoli','pcrajagoli@gmail.com','9845755672','2016-12-12 13:49:39','raj71prakash',NULL,NULL),(39,'Gangadhar','Wali','bvbwali@yahoo.com','9972344799','2016-12-12 15:01:32','karnatakata',NULL,NULL),(40,'Veena','Hebsur','qveen72@gmail.com','9845689272','2016-12-12 17:45:40','vmg@1234',NULL,NULL),(41,'Girish','Doddamani','girishdoddamani@gmail.com','9845498346','2016-12-12 18:01:13','gssiest4',NULL,NULL),(42,'Sanjeev','Patwari','sanjeevpatwari71@gmail.com','9845084292','2016-12-13 15:52:22','avvimari@06',NULL,NULL),(43,'Prakash','C','prakashc77@gmail.com','9448160768','2016-12-13 18:02:06','sai1baba2',NULL,NULL);
+/*!40000 ALTER TABLE `dat_regs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lkp_payments_attendees`
+--
+
+DROP TABLE IF EXISTS `lkp_payments_attendees`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `lkp_payments_attendees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `attendee_id_fk` int(11) DEFAULT NULL,
+  `payment_id_fk` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lkp_payments_attendees`
+--
+
+LOCK TABLES `lkp_payments_attendees` WRITE;
+/*!40000 ALTER TABLE `lkp_payments_attendees` DISABLE KEYS */;
+INSERT INTO `lkp_payments_attendees` VALUES (60,99,62),(61,103,63),(62,104,63),(63,118,64),(64,119,64),(65,120,64),(66,121,64),(67,122,64);
+/*!40000 ALTER TABLE `lkp_payments_attendees` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mas_logins`
+--
+
+DROP TABLE IF EXISTS `mas_logins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mas_logins` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(30) DEFAULT NULL,
+  `pwd` varchar(30) DEFAULT NULL,
+  `last_login` datetime DEFAULT NULL,
+  `last_login_ip` varchar(20) DEFAULT NULL,
+  `log` varchar(10000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mas_logins`
+--
+
+LOCK TABLES `mas_logins` WRITE;
+/*!40000 ALTER TABLE `mas_logins` DISABLE KEYS */;
+INSERT INTO `mas_logins` VALUES (32,NULL,NULL,NULL,NULL,'upd res ');
+/*!40000 ALTER TABLE `mas_logins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mas_prices`
+--
+
+DROP TABLE IF EXISTS `mas_prices`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mas_prices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Adult` float DEFAULT NULL,
+  `Children` float DEFAULT NULL,
+  `Infant` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mas_prices`
+--
+
+LOCK TABLES `mas_prices` WRITE;
+/*!40000 ALTER TABLE `mas_prices` DISABLE KEYS */;
+INSERT INTO `mas_prices` VALUES (4,1000,500,0);
+/*!40000 ALTER TABLE `mas_prices` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-12-14  3:39:29

@@ -1,0 +1,6 @@
+*.zip
+./tmp/*
+./dbbkup/*
+./code_bkup
+./bad_imgs
+./*.sql
